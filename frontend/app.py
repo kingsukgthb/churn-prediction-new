@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import requests
 
-BACKEND_URL = "http://backend:7860"
+#BACKEND_URL = "http://backend:7860"
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:7860")
 
 # Streamlit UI for Customer Churn Prediction
 st.title("Telecom Customer Churn Prediction App")
